@@ -1,25 +1,19 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Contact Us - Travel Recommendation</title>
 
     <link rel="stylesheet" href="travel_recommendation.css">
-
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
+    <!-- NAVIGATION -->
     <nav class="navbar">
 
         <div class="logo">
@@ -28,88 +22,153 @@
         </div>
 
         <div class="nav-links">
-
-            <a href="travel_recommendation.html">
-                Home
-            </a>
-
-            <a href="about_us.html">
-                About Us
-            </a>
-
-            <a href="contact_us.html">
-                Contact Us
-            </a>
-
+            <a href="travel_recommendation.html">Home</a>
+            <a href="about_us.html">About Us</a>
+            <a href="contact_us.html" aria-current="page">Contact Us</a>
         </div>
 
     </nav>
 
-
-    <!-- ================= CONTACT ================= -->
-
+    <!-- CONTACT SECTION -->
     <main class="contact-page">
 
-        <section class="contact-section">
+        <section class="contact-hero">
 
             <h1>Contact Us</h1>
 
             <p>
-                We would love to hear from you.
-                Please fill out the form below.
+                Do you have questions about a destination?
+                Would you like help planning your next adventure?
+                We are here to help!
             </p>
 
+        </section>
 
-            <form id="contactForm">
+        <section class="contact-container">
 
-                <label for="name">
-                    Name
-                </label>
+            <!-- CONTACT INFORMATION -->
+            <div class="contact-info">
 
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    required
-                >
+                <h2>Get in Touch</h2>
 
+                <p>
+                    Contact our team for travel recommendations,
+                    destination information, or assistance with your
+                    next trip.
+                </p>
 
-                <label for="email">
-                    Email
-                </label>
+                <div class="contact-detail">
+                    <h3>Email Address</h3>
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                >
+                    <p>
+                        <a href="mailto:contact@travelrecommendation.com">
+                            contact@travelrecommendation.com
+                        </a>
+                    </p>
+                </div>
 
+                <div class="contact-detail">
+                    <h3>Our Mission</h3>
 
-                <label for="message">
-                    Message
-                </label>
+                    <p>
+                        We help travelers discover amazing destinations
+                        and find experiences that match their interests.
+                    </p>
+                </div>
 
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    placeholder="Write your message"
-                    required
-                ></textarea>
+            </div>
 
+            <!-- CONTACT FORM -->
+            <div class="contact-form-container">
 
-                <button type="submit">
-                    Submit
-                </button>
+                <h2>Send Us a Message</h2>
 
-            </form>
+                <form id="contactForm">
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                            minlength="2"
+                            maxlength="100"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                            maxlength="254"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Enter the subject"
+                            required
+                            maxlength="150"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Write your message here..."
+                            required
+                            minlength="10"
+                            maxlength="5000"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" id="sendBtn">
+                        Send Message
+                    </button>
+
+                    <p
+                        id="formStatus"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+            </div>
 
         </section>
 
     </main>
 
+    <!-- FOOTER -->
+    <footer class="contact-footer">
+
+        <p>
+            &copy; 2026 Travel Recommendation.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+    <script src="contact_us.js"></script>
+
 </body>
 </html>
+```
